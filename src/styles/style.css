@@ -1,0 +1,31 @@
+body {
+
+    background-color: grey;
+}
+
+#primary-layout {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+#header {
+    background-color: aquamarine;
+    height: 5vh;
+}
+#filled-cv {
+    display:grid;
+    background-color: rgb(230, 224, 224);
+    height: 90vh;
+    width: 40vw;
+    margin: auto;
+    margin-top: 20px;
+    
+}
+#filling-cv {
+    display:grid;
+    background-color: rgb(230, 224, 224);
+    height: 90vh;
+    width: 40vw;
+    margin: auto;
+    margin-top: 20px;
+}
