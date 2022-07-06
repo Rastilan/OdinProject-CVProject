@@ -1,20 +1,27 @@
 import React from 'react';
 
 
-function Complete(props) {
-  const {value} = this.props;
+export default class Complete extends React.Component {
 
+  
+  render(){
     return(
       <>
-      <div id="complete-pracitical-name">{ value }</div>
-      <div id="pracitical-position">Position</div>
-      <div id="pracitical-task">Primary Task</div>
-      <div id="pracitical-date">Primary Task</div>
+      <div>Name: {this.props.nameTextBoxVal }</div>
+      <div>Email: { this.props.emailTextBoxVal }</div>
+      <div>Phone Number: { this.props.phoneTextBoxVal }</div>
+      <br/>
+      <div> Company Name: { this.props.companyNameTextBoxVal }</div>
+      <div>Position: { this.props.companyPositionTextBoxVal }</div>
+      <div>School Name: { this.props.schoolNameTextBoxVal }</div>
+      <div>Study: { this.props.schoolStudyTextBoxVal }</div>
+
+      
+
       </>
     )
   
 
    
+  }
 }
-
-export default Complete;

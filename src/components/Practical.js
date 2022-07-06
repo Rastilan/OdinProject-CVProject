@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-class Practical extends React.Component{
+export class Practical extends React.Component{
 
     
 
@@ -10,26 +10,34 @@ class Practical extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            value: "test"
+            companyNameTextBoxValue: "",
+            companyPositionTextBoxValue: ""
             
         }
 
        
-        this.handleNameChange = this.handleNameChange.bind(this);
+
       }
 
+      SubmitValue = () => { this.props.handleData(this.state.companyNameTextBoxValue, this.state.companyPositionTextBoxValue)}
 
-      handleNameChange(event) {    this.setState({value: event.target.value});  }
+      onChangeName = (val) => {
+        this.setState({companyNameTextBoxValue: val.target.value})
+      }
+      onChangePosition = (val) => {
+        this.setState({companyPositionTextBoxValue: val.target.value})
+      }
 
     render(){
         return ( <>
-        <div id="practical-name">Company Name: {this.state.value}
-            <input type="test" id="practical-name"  value={this.state.value} onChange={this.handleNameChange}/>
+        <div>Company Name: 
+            <input type="test" onChange={this.onChangeName}/>
         </div>
-        <div id="practical-position">Position</div>
-        <div id="practical-task">Primary Task</div>
-        <div id="practical-date">Primary Task</div>
-        
+        <div>Company Position:
+            <input type="test" onChange={this.onChangePosition}/>
+        </div>
+        <button onClick={this.SubmitValue}>Save changes to this section</button>
+
         </>
         
         )
@@ -40,4 +48,3 @@ class Practical extends React.Component{
       
 }
 
-export default Practical;
